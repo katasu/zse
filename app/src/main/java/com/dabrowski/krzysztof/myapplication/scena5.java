@@ -44,7 +44,7 @@ public class scena5 extends AppCompatActivity {
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                 RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
-        Intent intent1 = intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
                 getString(R.string.speech_prompt));
         try {
             startActivityForResult(intent, REQ_CODE_SPEECH_INPUT);
@@ -52,7 +52,7 @@ public class scena5 extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),
                     getString(R.string.speech_not_supported),
                     Toast.LENGTH_SHORT).show();
-            }
+        }
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
