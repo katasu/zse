@@ -18,7 +18,7 @@ import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
     final static private int CAPTURE_IMAGE = 1;
-    Button p1, p2, p3, p4;
+    Button p1, p2, p3, p4, p5;
     TextView t1;
 
 
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         t1.setVisibility(View.VISIBLE);
                         t1.setText("KOCHAM ZSE <3");
-                        t1.setTextColor(Color.GRAY);
+                        t1.setTextColor(Color.CYAN);
                         t1.setTextSize(52);}});
 
 
@@ -85,7 +85,17 @@ public class MainActivity extends AppCompatActivity {
                         t1.setVisibility(View.GONE);
                         t1.setText("KOCHAM ZSE <3");
                         t1.setTextColor(Color.GRAY);
-                        t1.setTextSize(52);}});}
+                        t1.setTextSize(52);}});
+
+                p5 =(Button) findViewById(R.id.button5);
+                p5.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(getApplicationContext(), scena5.class);
+                        startActivity(i);
+                    }
+                });
+            }
 
 
                 private static File getOutputMediaFile() {
